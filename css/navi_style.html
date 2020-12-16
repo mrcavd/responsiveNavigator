@@ -1,0 +1,106 @@
+<style>
+    .dot {
+        padding: 0;
+        margin: 0;
+        height: 5px;
+        width: 5px;
+        background-color: #f3ffea;
+        border-radius: 25%;
+        display: inline-block;
+        opacity: 0.8;
+    }
+
+    .dotHighlight {
+        padding: 0;
+        height: 5px;
+        width: 5px;
+        background-color: #cecb7b;
+        border-radius: 25%;
+        display: inline-block;
+        opacity: 0.8;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .navigator {
+        /*position: fixed;*/
+        margin: 0;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        z-index: 2;
+        width: 35px;
+        padding-left: 1vw;
+        padding-top: 50%;
+        padding-bottom: 50%;
+        
+        text-align: left;
+        transition: all 0.4s;
+    }
+
+    .navigator:hover {
+        width: 20%;
+        min-width: 350px;
+        text-align: left;
+    }
+
+    .navigator>*{
+        transition: all 0.4s;
+        height: 13px;
+    }
+
+    .navigator:hover>* {
+        /*margin-left: 1vw;*/
+        height: 28px;
+        text-overflow: ellipsis;
+        opacity: 1.0;
+    }
+
+    .navigator:hover .dot {
+        margin-bottom: 3px;
+    }
+
+    .navigator:hover .dotHighlight {
+        height: 8px;
+    }
+
+    .navigator:hover .hidden {
+        display: inline;
+    }
+
+    .navigatorBackground {
+        position: fixed;
+        z-index: 2;
+        width: 35px;
+        height: 100vh;
+        min-width: 15px;
+        padding: 5% 0;
+        /*background-color: #191e18;*/
+        opacity: 0;
+        left: 0;
+        top: 0%;
+        border-radius: 5px;
+        text-align: center;
+        transition: opacity 1s;
+    }
+
+    .navigatorBackgroundHighlight {
+        width: 23%;
+        background-image: linear-gradient(to right, #191e18, rgba(0, 0, 0, 0));
+        min-width: 350px;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .navigatorText {
+        text-align: center;
+        font-family: Lato;
+        font-size: 1.8vh;
+        font-weight: 300;
+        color: #cebc7b;
+        margin-bottom: 0px;
+    }
+</style>
